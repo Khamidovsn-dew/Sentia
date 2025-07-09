@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Product Detail – Empire Textile" />
+    <title>Product Detail - Empire Textile</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-layout">
+      <!-- HEADER -->
+      <div id="header"></div>
+      
+
+      <!-- PRODUCT DETAIL SECTION -->
+      <section class="products-page">
+        <div class="products-header">
+          <h2 data-i18n="products_title">OUR PRODUCTS</h2>
+        </div>
+      
+        <div class="products-grid">
+          <a href="/product-eco-tote.html" class="product-card">
+            <img src="images/product-1.jpg" alt="Eco Tote Bags" />
+            <div class="card-footer">
+              <span data-i18n="product_tote">ECO TOTE BAGS</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+      
+          <a href="/product-bed-linen.html" class="product-card">
+            <img src="images/product-2.jpg" alt="Bed Linen" />
+            <div class="card-footer">
+              <span data-i18n="product_linen">BED LINEN</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+      
+          <a href="/product-robes.html" class="product-card">
+            <img src="images/product-3.jpg" alt="Robes" />
+            <div class="card-footer">
+              <span data-i18n="product_robes">ROBES</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+      
+          <a href="/product-towels.html" class="product-card">
+            <img src="images/product-4.jpg" alt="Towels" />
+            <div class="card-footer">
+              <span data-i18n="product_towels">TOWELS</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+      
+          <a href="/product-socks.html" class="product-card">
+            <img src="images/product-5.png" alt="Socks" />
+            <div class="card-footer">
+              <span data-i18n="product_socks">SOCKS</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+      
+          <a href="/product-boxers.html" class="product-card">
+            <img src="images/product-6.jpg" alt="Boxer Briefs" />
+            <div class="card-footer">
+              <span data-i18n="product_boxers">BOXER BRIEFS</span>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      
+
+    <!-- FOOTER -->
+
+    <div id="footer"></div>
+    <script src="js/main.js"></script>
+
+    <!-- Load Partials -->
+    <script>
+      fetch("partials/header.html")
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("header").innerHTML = data;
+    if (typeof setupHeader === "function") {
+      setupHeader(); // 🟢 This runs all header logic (burger, lang, etc.)
+    }
+    });
+
+      fetch("partials/footer.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

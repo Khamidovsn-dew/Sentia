@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Empire Textile – Eco & Premium Textile Products"
+    />
+    <title>Contact Us - Empire Textile</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-layout">
+      <!-- HEADER -->
+      <div id="header"></div>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-full">
+        <div class="contact-left">
+          <video autoplay muted loop playsinline>
+            <source src="/videos/contact us.mov" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      
+        <div class="contact-right">
+          <h2>BRING YOUR IDEAS TO LIFE</h2>
+          <form class="contact-form">
+            <div class="form-row">
+              <input type="text" placeholder="First name" />
+              <input type="text" placeholder="Last name" />
+            </div>
+            <input type="email" placeholder="exemple@gmail.com" />
+            <textarea placeholder="Your message"></textarea>
+            <button type="submit">CONTACT US →</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- CONTACT INFO SECTION -->
+<section class="contact-info-section">
+  <div class="contact-info-left">
+    <div class="info-box">
+      <h3>ADDRESS</h3>
+      <p>Żurawia 6/12, Room 769<br />Warsaw, Poland</p>
+    </div>
+    <div class="info-box">
+      <h3>OUR WAREHOUSE</h3>
+      <p>st. Stefan Batory 2<br />PL-05-870 Pass, Błonie</p>
+    </div>
+    <div class="info-box">
+      <h3>CONTACT</h3>
+      <p>
+        +48 690 984 002<br />
+        biuro@empiretextile.pl<br />
+        bobur@empiretextile.pl
+      </p>
+    </div>
+    <div class="info-box">
+      <h3>OPENING HOURS</h3>
+      <p>
+        Mon–Fri: 8:00 a.m. – 8:00 p.m.<br />
+        Sat: 10:00 a.m. – 7:00 p.m.
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-info-right">
+    <video autoplay muted loop playsinline>
+      <source src="/videos/about-us-video.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+ <!-- FOOTER -->
+
+ <div id="footer"></div>
+     
+ <script src="js/main.js"></script>
+<script>
+  fetch("partials/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+      if (typeof setupHeader === "function") {
+        setupHeader(); // ✅ Attach burger + lang + escape key support
+      }
+    });
+
+
+  fetch("partials/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      const footer = document.getElementById("footer");
+      if (footer) footer.innerHTML = data;
+    });
+</script>
+
+  </body>
+</html>

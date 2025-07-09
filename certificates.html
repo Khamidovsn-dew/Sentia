@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Empire Textile – Eco & Premium Textile Products"
+    />
+    <title>Empire Textile</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-layout">
+      <!-- HEADER -->
+      <div id="header"></div>
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="/videos/certificates.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+          <h1>
+            WE CREATE NATURAL <br />
+            PRODUCTS
+          </h1>
+          <p>
+            We produce eco bags and cotton fabrics using modern <br />
+            manufacturing technologies.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ISO -->
+
+    <section class="about-intro">
+      <div class="about-intro-left">
+        <p class="label">ISO 45001:2018</p>
+        <h2>Occupational Health and Safety Management System</h2>
+        <p>
+          The ISO 45001:2018 certification reflects Empiretextile MKH LLC's
+          strong commitment to the health and safety of its employees. We
+          implement best practices in occupational safety across all stages of
+          fabric production, dyeing, and sales.
+        </p>
+      </div>
+      <div class="about-intro-right">
+        <img src="/images/ISO/ISO-1.png" alt="Empire Textile Bed Scene" />
+      </div>
+    </section>
+
+    <!-- ISO 2 -->
+
+    <section class="mission-vision-section">
+      <div class="mission-image">
+        <img src="/images/ISO/ISO-2.png" alt="Stack of Towels" />
+      </div>
+
+      <div class="mission-text">
+        <p class="label">ISO 45001:2018</p>
+
+        <h2>Quality Management System for Medical Devices</h2>
+        <p>
+          This certificate confirms that the production of medical gauze at
+          Empiretextile MKH LLC complies with international quality standards
+          for medical devices. We ensure the safety, reliability, and full
+          compliance of our products with healthcare industry requirements.
+        </p>
+      </div>
+    </section>
+
+    <!-- ISO 3 -->
+
+    <section class="about-intro">
+      <div class="about-intro-left">
+        <p class="label">ISO 14001:2015</p>
+        <h2>Environmental Management System</h2>
+        <p>
+          Empiretextile MKH LLC is certified under ISO 14001:2015, demonstrating
+          our dedication to environmental responsibility. We strive to minimize
+          the environmental impact of our production processes by adopting
+          efficient and sustainable practices.
+        </p>
+      </div>
+      <div class="about-intro-right">
+        <img src="/images/ISO/ISO-3.jpg" alt="Empire Textile Bed Scene" />
+      </div>
+    </section>
+
+    <!-- ISO 4 -->
+
+    <section class="mission-vision-section">
+      <div class="mission-image">
+        <img src="/images/ISO/ISO-4.jpg" alt="Stack of Towels" />
+      </div>
+
+      <div class="mission-text">
+        <p class="label">ISO 9001:2015</p>
+
+        <h2>Quality Management System</h2>
+        <p>
+          The ISO 9001:2015 certification ensures that the production, dyeing,
+          and sales processes at Empiretextile MKH LLC meet the highest quality
+          standards. We are committed to continuously improving our internal
+          processes to deliver consistently high-quality products and services.
+        </p>
+      </div>
+    </section>
+
+    <!-- IDEAS TO LIFE -->
+
+    <section class="about-contact-cta">
+      <div class="about-contact-wrapper">
+        <h2>BRING YOUR IDEAS TO LIFE</h2>
+        <p>
+          Whether you're starting from scratch or refreshing your current <br />
+          website, I’ll help turn your vision into a clean, modern, and <br />
+          functional online experience.
+        </p>
+        <a href="/empire-textile/contact.html" class="about-contact-btn"
+          >GET IN TOUCH →</a
+        >
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+      fetch("partials/header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          if (typeof setupHeader === "function") {
+            setupHeader();
+          }
+        });
+
+      fetch("partials/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          const footer = document.getElementById("footer");
+          if (footer) footer.innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
