@@ -23,6 +23,14 @@ video {
   }
 }
 
+@media (max-width: 768px ){
+  .hero-video {
+    object-position: 100% center; /* 👈 Pushes view to start from further left */
+    transform: scaleX(-1);
+  }
+}
+
+
 @media (max-width: 768px) {
   .header-container {
     position: relative;
