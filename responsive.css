@@ -25,7 +25,7 @@ video {
 
 @media (max-width: 768px ){
   .hero-video {
-    object-position: 100% center; 
+    object-position: 100% center; /* 👈 Pushes view to start from further left */
     transform: scaleX(-1);
   }
 }
@@ -193,6 +193,7 @@ video {
 
   .form-row {
     flex-direction: column;
+    gap: 12px;
   }
 
   .contact-left h2 {
@@ -502,4 +503,17 @@ video {
   text-align: center;
   text-decoration: none;
   width: 80%;
+}
+
+
+#lightbox {
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  transition: transform 0.3s ease;
+}
+
+#lightbox img:hover {
+  transform: scale(1.03);
 }
