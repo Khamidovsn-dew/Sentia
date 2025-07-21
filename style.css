@@ -8,20 +8,20 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
-  background-color: #000;
   overflow-x: hidden;
 }
 
 /* === Layout === */
 .page-layout {
   width: 100%;
-  max-width: 1440px;
-  min-height: 834px; 
+  min-height: 834px;
   margin: 0 auto;
   background: rgba(63, 49, 36, 0.26);
   border-bottom: 1px solid #eceae4;
-  position: relative;
-  overflow: hidden;
+  /* position: relative;
+  overflow: hidden; */
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* === Header === */
@@ -197,16 +197,11 @@ body {
 
 /* === Responsive Layout === */
 
-
-
-
-
-
 /* === ABOUT SECTION === */
 .about-section {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   height: auto;
   min-height: 600px;
@@ -402,13 +397,11 @@ body {
   transform: scale(1.06);
 }
 
-
-
 /* === WHY CHOOSE SECTION === */
 .why-choose-section {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   background-color: #3f3124;
   color: #eceae4;
@@ -473,8 +466,6 @@ body {
   color: #eceae4;
 }
 
-
-
 /* === Animation: Fade Up === */
 .fade-up {
   opacity: 0;
@@ -488,17 +479,17 @@ body {
   transform: translateY(0);
 }
 
-
 /* === CERTIFICATES SECTION === */
 
 .certificates-section {
   position: relative;
   background: url("/images/Cerification_mainpage.jpg") center/cover no-repeat;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   height: 834px;
   margin: 0 auto;
   overflow: hidden;
+  border-bottom: 1px solid #3f3124;
 }
 
 .certificates-overlay {
@@ -552,16 +543,14 @@ body {
 }
 
 
-/* === CONTACT SECTION === */
 
 /* === CONTACT SECTION === */
 .contact-section {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  min-height: 600px;
   margin: 0 auto;
   background: #f8f5ee;
-  border-top: 1px solid #3f3124;
   border-bottom: 1px solid #3f3124;
 }
 
@@ -574,7 +563,6 @@ body {
 
 .contact-left {
   border-right: 1px solid #3f3124;
- 
 }
 
 .contact-left h2 {
@@ -593,7 +581,7 @@ body {
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  padding: 40px 40px 3px 30px;  
+  padding: 40px 40px 3px 30px;
   margin-bottom: 20px;
   color: #3f3124;
 }
@@ -612,22 +600,59 @@ body {
 .form-row input {
   flex: 1;
 }
+/* 
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    background: transparent;
+    color: #3f3124 !important; 
+  } */
 
+  /* Default */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  border: 1px solid #3f3124;
   background: transparent;
-  color: #a7a097;
+  color: inherit; /* allow inheritance */
 }
+
+/* For light pages */
+body.light-bg .contact-form input,
+body.light-bg .contact-form textarea {
+  color: #3f3124;
+}
+
+/* For dark pages */
+body.dark-bg .contact-form input,
+body.dark-bg .contact-form textarea {
+  color: #eceae4;
+}
+
+/* Placeholder fixes */
+body.dark-bg .contact-form input::placeholder,
+body.dark-bg .contact-form textarea::placeholder {
+  color: #c7c0b9;
+  opacity: 1;
+}
+
+body.light-bg .contact-form input::placeholder,
+body.light-bg .contact-form textarea::placeholder {
+  color: #8b8074;
+  opacity: 1;
+}
+
 
 .contact-form textarea {
   resize: vertical;
   height: 120px;
 }
+
 
 .submit-btn {
   align-self: start;
@@ -658,8 +683,6 @@ body {
   margin-bottom: 8px;
   color: #3f3124;
 }
-
-
 
 /* === FOOTER === */
 
@@ -736,8 +759,6 @@ body {
   height: 20px;
 }
 
-
-
 .footer-socials svg {
   width: 20px;
   height: 20px;
@@ -754,7 +775,7 @@ body {
 .about-intro {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   border-top: 1px solid #eceae4;
   border-bottom: 1px solid #eceae4;
@@ -808,12 +829,10 @@ body {
   display: block;
 }
 
-
 /* === OUR MISSION & VISION === */
 .mission-vision-section {
   display: flex;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   border-top: 1px solid #eceae4;
   border-bottom: 1px solid #eceae4;
@@ -862,12 +881,11 @@ body {
 
 /* Responsive */
 
-
 /* === STATISTICS === */
 
 .stats-section {
   display: flex;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   background-color: #3f3124;
   border-top: 1px solid #eceae4;
@@ -918,7 +936,6 @@ body {
 }
 
 /* Responsive */
-
 
 /* === OUR CERTIFICATES === */
 .about-cert-section {
@@ -986,7 +1003,7 @@ body {
 .about-contact-cta {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   background-color: #f8f5ee;
   padding: 250px 20px;
@@ -1045,7 +1062,7 @@ body {
   background: #3f3124;
   color: #eceae4;
   padding: 200px 40px;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -1102,13 +1119,11 @@ body {
   font-size: 18px;
 }
 
-
-
 /* === EACH PRODUCTS === */
 
 a {
   color: inherit;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 a:hover {
@@ -1121,7 +1136,6 @@ a:hover {
 .contact-full {
   display: flex;
   width: 100%;
-  max-width: 1440px;
   height: 834px; /* matches your Figma design */
   margin: 0 auto;
   background-color: #3f3124;
@@ -1148,13 +1162,13 @@ a:hover {
 }
 
 .contact-right {
-  width: 50%;
-  padding: 80px;
-  box-sizing: border-box;
+  width: 100%;
+  padding: 1px;
+  margin-left: 5px;
+  /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .contact-right h2 {
@@ -1172,7 +1186,7 @@ a:hover {
 
 .form-row {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .contact-form input,
@@ -1210,13 +1224,12 @@ a:hover {
 
 /* === Responsive === */
 
-
 /* ===  CONTACT INFO SECTION === */
 /* === CONTACT INFO SECTION === */
 .contact-info-section {
   display: flex;
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   height: 760px;
   border-top: 1px solid #eceae4;
@@ -1283,10 +1296,6 @@ a:hover {
 
 /* Responsive */
 
-
-
-
-
 .lang-menu {
   display: none;
   position: absolute;
@@ -1314,3 +1323,71 @@ a:hover {
 .language-dropdown {
   position: relative;
 }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 2px solid #eceae4;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  font-size: 40px;
+  color: #eceae4;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#lightbox {
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  transition: transform 0.3s ease;
+}
+
+#lightbox img:hover {
+  transform: scale(1.03);
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 2px solid #eceae4;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
