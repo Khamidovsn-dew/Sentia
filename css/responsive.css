@@ -30,7 +30,6 @@ video {
   }
 }
 
-
 @media (max-width: 768px) {
   .header-container {
     position: relative;
@@ -194,6 +193,7 @@ video {
 
   .form-row {
     flex-direction: column;
+    gap: 12px;
   }
 
   .contact-left h2 {
@@ -503,4 +503,17 @@ video {
   text-align: center;
   text-decoration: none;
   width: 80%;
+}
+
+
+#lightbox {
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  transition: transform 0.3s ease;
+}
+
+#lightbox img:hover {
+  transform: scale(1.03);
 }
