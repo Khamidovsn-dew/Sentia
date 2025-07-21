@@ -10,8 +10,7 @@
     <title>Contact Us - Empire Textile</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-
-    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="icon" href="/images/favicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +18,8 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="dark-bg">
+
     <div class="page-layout">
       <!-- HEADER -->
       <div id="header"></div>
@@ -35,15 +35,30 @@
       
         <div class="contact-right">
           <h2>BRING YOUR IDEAS TO LIFE</h2>
-          <form class="contact-form">
+          <form class="contact-form" method="POST" action="https://formsubmit.co/biuro@empiretextile.pl">
+            <!-- Hidden config for FormSubmit -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="New message from Empire Textile contact page" />
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting Empire Textile. We’ll respond shortly." />
+
+          
+            <!-- Name row -->
             <div class="form-row">
-              <input type="text" placeholder="First name" />
-              <input type="text" placeholder="Last name" />
+              <input type="text" name="first_name" placeholder="First name" required />
+              <input type="text" name="last_name" placeholder="Last name" required />
             </div>
-            <input type="email" placeholder="exemple@gmail.com" />
-            <textarea placeholder="Your message"></textarea>
+          
+            <!-- Email -->
+            <input type="email" name="email" placeholder="example@gmail.com" required />
+          
+            <!-- Message -->
+            <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+          
+            <!-- Submit Button -->
             <button type="submit">CONTACT US →</button>
           </form>
+          
         </div>
       </section>
 
@@ -56,12 +71,12 @@
     </div>
     <div class="info-box">
       <h3>OUR WAREHOUSE</h3>
-      <p>st. Stefan Batory 2<br />PL-05-870 Pass, Błonie</p>
+      <p>st. Zbąszyńska 3V<br />PL-91-342,ŁÓDŹ</p>
     </div>
     <div class="info-box">
       <h3>CONTACT</h3>
       <p>
-        +48 690 984 002<br />
+        +48 450 127 777<br />
         biuro@empiretextile.pl<br />
         bobur@empiretextile.pl
       </p>
